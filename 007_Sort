@@ -8,27 +8,9 @@ using namespace std;
 class Solution
 {
     public:
-    void swap(int *a,int *b){
-        int t=*a;
-        *a=*b;
-        *b=t;
+    void sort012(int a[], int n){
+        sort(a, a+n);
     }
-    void sort012(int a[], int n)
-    {
-        int swapd=0;
-        for(int i=0;i<n-1;i++){
-            
-            for(int j=0;j<n-i-1;j++)
-            if(a[j]>=a[j+1]){
-               swap(&a[j],&a[j+1]);
-               swapd=1;
-            }
-        }
-        if(swapd==0){
-            exit(0);
-        }
-    }
-    
 };
 
 //{ Driver Code Starts.
